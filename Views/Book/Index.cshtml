@@ -1,0 +1,68 @@
+﻿@model IEnumerable<BooksApp.Models.Book>
+
+@{
+    ViewData["Title"] = "Libros";
+}
+
+<h1>Listado de Libros</h1>
+<hr />
+
+<div class="my-4">
+    <a class="btn-create" asp-action="Create">
+        <img class="add" src="~/assets/img/add.png" alt="Agregar" /> Agregar libro
+    </a>
+</div>
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pages)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Language)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pages)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Language)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price) €
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id"><img src="~/assets/img/edit.png" width="16" height="16" alt="Editar"/></a>
+                <a asp-action="Details" asp-route-id="@item.Id"><img src="~/assets/img/details.png" width="16" height="16" alt="Detalles"/></a>
+                <a asp-action="Delete" asp-route-id="@item.Id"><img src="~/assets/img/delete.png" width="16" height="16" alt="Borar"/></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

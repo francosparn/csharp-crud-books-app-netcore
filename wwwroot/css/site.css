@@ -1,0 +1,91 @@
+﻿*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+hr {
+    color: #D0D0D0;
+}
+
+label{
+    font-weight: 600;
+}
+
+thead {
+    border-bottom: 2px solid rgb(241, 240, 240);
+    background-color: #FCFCFC;
+}
+
+/* Index */
+.index-description{
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+nav {
+    background-color: #FCFCFC;
+    border-bottom: 1px solid #F1F0F0;
+}
+
+.title{
+    font-size: 22px;
+    font-family: 'Century Gothic';
+}
+
+.name {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.footer {
+    border-top: 1px solid #F1F0F0;
+    background-color: rgb(248,249,250);
+    padding: 15px;
+    font-size: 13px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+.footer a{
+    color: #000;
+}
+
+
+/* Books */
+.btn-create,
+.btn-save{
+    background-color: #27C187;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-create:hover,
+.btn-save:hover{
+    background-color: #119b77;
+    color: #FFF;
+    transition: 1s ease;
+}
+
+.add{
+    width: 16px;
+    height: 16px;
+}
+
+.btn-edit {
+    background-color: dodgerblue;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-edit:hover{
+    background-color: cornflowerblue;
+    transition: 1s ease;
+    color: #FFF;
+}
